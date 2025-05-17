@@ -29,3 +29,12 @@
   background: linear-gradient(135deg, #000000e6 0%, #1A1F2C 40%, #7C3AED 100%);
 }
 
+.dark-card {
+  background-color: rgba(30, 30, 40, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-light {
+  color: #eee;
+}

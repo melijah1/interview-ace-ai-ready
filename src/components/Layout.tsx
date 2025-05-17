@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <div className="mobile-container relative pb-16">
       <Outlet />
-      <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white border-t border-gray-200 h-16 flex items-center justify-around">
+      <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-gray-900/80 backdrop-blur-lg border-t border-white/10 h-16 flex items-center justify-around">
         <NavTab to="/home" icon={<Home size={24} />} label="Home" />
         <NavTab to="/mock-interview" icon={<MessageSquare size={24} />} label="Interview" />
         <NavTab to="/questions" icon={<BookOpen size={24} />} label="Questions" />
@@ -22,7 +22,7 @@ const NavTab = ({ to, icon, label }: { to: string; icon: React.ReactNode; label:
       to={to}
       className={({ isActive }) =>
         `flex flex-col items-center justify-center w-1/4 transition-colors ${
-          isActive ? "text-interview-blue" : "text-interview-dark-gray/60"
+          isActive ? "text-purple-400" : "text-gray-400"
         }`
       }
     >
