@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mic } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ const Welcome = () => {
           <Mic size={48} className="text-white" />
         </div>
         
-        <h1 className="text-4xl font-bold mb-3 animate-slide-up bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-300 to-purple-400">
+        <h1 className="text-4xl font-bold mb-3 animate-slide-up text-shimmer">
           Interview Ready
         </h1>
         
@@ -48,31 +49,36 @@ const Welcome = () => {
           Ace your next interview with confidence
         </p>
         
-        <ul className="text-left space-y-4 mb-12 w-full max-w-xs animate-slide-up" style={{animationDelay: "0.2s"}}>
-          <li className="flex items-center">
-            <div className="w-8 h-8 gradient-blue rounded-full flex items-center justify-center mr-4 shadow-sm flex-shrink-0">
-              <span className="text-white font-medium">✓</span>
-            </div>
-            <span className="text-gray-200">AI-powered mock interviews</span>
-          </li>
-          <li className="flex items-center">
-            <div className="w-8 h-8 gradient-blue rounded-full flex items-center justify-center mr-4 shadow-sm flex-shrink-0">
-              <span className="text-white font-medium">✓</span>
-            </div>
-            <span className="text-gray-200">Personalized interview feedback</span>
-          </li>
-          <li className="flex items-center">
-            <div className="w-8 h-8 gradient-blue rounded-full flex items-center justify-center mr-4 shadow-sm flex-shrink-0">
-              <span className="text-white font-medium">✓</span>
-            </div>
-            <span className="text-gray-200">Question bank & elevator pitch coach</span>
-          </li>
-        </ul>
+        <Card className="w-full max-w-xs mb-12 bg-transparent dark-card border-purple-500/20 animate-slide-up" style={{animationDelay: "0.2s"}}>
+          <CardContent className="p-6">
+            <ul className="space-y-4">
+              <li className="flex items-center">
+                <div className="w-8 h-8 gradient-blue rounded-full flex items-center justify-center mr-4 shadow-sm flex-shrink-0">
+                  <span className="text-white font-medium">✓</span>
+                </div>
+                <span className="text-gray-200">AI-powered mock interviews</span>
+              </li>
+              <li className="flex items-center">
+                <div className="w-8 h-8 gradient-blue rounded-full flex items-center justify-center mr-4 shadow-sm flex-shrink-0">
+                  <span className="text-white font-medium">✓</span>
+                </div>
+                <span className="text-gray-200">Personalized interview feedback</span>
+              </li>
+              <li className="flex items-center">
+                <div className="w-8 h-8 gradient-blue rounded-full flex items-center justify-center mr-4 shadow-sm flex-shrink-0">
+                  <span className="text-white font-medium">✓</span>
+                </div>
+                <span className="text-gray-200">Question bank & elevator pitch coach</span>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
         
         <div className="w-full max-w-xs animate-slide-up" style={{animationDelay: "0.3s"}}>
           <Button 
             onClick={handleGetStarted} 
             className="w-full h-14 text-lg font-medium rounded-xl gradient-blue shadow-lg hover:opacity-95 transition-opacity border border-purple-500/30 hover:border-purple-400/70"
+            size="lg"
           >
             Get Started
           </Button>

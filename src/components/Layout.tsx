@@ -1,6 +1,8 @@
 
 import { Outlet, NavLink } from "react-router-dom";
 import { Home, MessageSquare, BookOpen, User } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Layout = () => {
   return (
@@ -18,23 +20,33 @@ const Layout = () => {
 
 const NavTab = ({ to, icon, label }: { to: string; icon: React.ReactNode; label: string }) => {
   return (
-    <NavLink
-      to={to}
-      className={({ isActive }) =>
-        `flex flex-col items-center justify-center w-1/4 transition-colors ${
-          isActive ? "text-purple-400" : "text-gray-400"
-        }`
-      }
-    >
-      {({ isActive }) => (
-        <>
-          <div className={isActive ? "bg-purple-500/20 p-1.5 rounded-full" : "p-1.5"}>
-            {icon}
-          </div>
-          <span className="text-xs mt-1">{label}</span>
-        </>
-      )}
-    </NavLink>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <NavLink
+            to={to}
+            className={({ isActive }) =>
+              cn(
+                "flex flex-col items-center justify-center w-1/4 transition-colors",
+                isActive ? "text-purple-400" : "text-gray-400"
+              )
+            }
+          >
+            {({ isActive }) => (
+              <>
+                <div className={isActive ? "bg-purple-500/20 p-1.5 rounded-full" : "p-1.5"}>
+                  {icon}
+                </div>
+                <span className="text-xs mt-1">{label}</span>
+              </>
+            )}
+          </NavLink>
+        </TooltipTrigger>
+        <TooltipContent>
+          {label}
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 };
 
