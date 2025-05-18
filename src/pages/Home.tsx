@@ -9,7 +9,17 @@ const Home = () => {
   const userName = "Alex"; // This would come from user state in a real app
   
   return (
-    <div className="p-6 pt-10">
+    <div className="p-6">
+      {/* Logo and App Name Header */}
+      <div className="flex items-center mb-6">
+        <img 
+          src="/lovable-uploads/2d912998-a468-49e0-afa5-cdf91dcb4161.png" 
+          alt="Interview Ready Logo" 
+          className="w-12 h-12 mr-2"
+        />
+        <h1 className="text-xl font-bold text-white">Interview Ready</h1>
+      </div>
+      
       <div className="flex justify-between items-center mb-8">
         <div>
           <h1 className="text-2xl font-bold text-white">
