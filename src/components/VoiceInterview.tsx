@@ -10,7 +10,11 @@ interface Message {
   content: string;
 }
 
-const VoiceInterview = () => {
+interface VoiceInterviewProps {
+  onBack?: () => void;  // Made this prop optional
+}
+
+const VoiceInterview: React.FC<VoiceInterviewProps> = ({ onBack }) => {
   const [isListening, setIsListening] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { type: "system", content: "Interview ready. Press the microphone button to start speaking." },
