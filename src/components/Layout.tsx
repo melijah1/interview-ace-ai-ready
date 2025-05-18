@@ -26,12 +26,14 @@ const NavTab = ({ to, icon, label }: { to: string; icon: React.ReactNode; label:
         }`
       }
     >
-      <div className={({ isActive }: { isActive: boolean }) => 
-        isActive ? "bg-purple-500/20 p-1.5 rounded-full" : "p-1.5"
-      }>
-        {icon}
-      </div>
-      <span className="text-xs mt-1">{label}</span>
+      {({ isActive }) => (
+        <>
+          <div className={isActive ? "bg-purple-500/20 p-1.5 rounded-full" : "p-1.5"}>
+            {icon}
+          </div>
+          <span className="text-xs mt-1">{label}</span>
+        </>
+      )}
     </NavLink>
   );
 };
