@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <div className="mobile-container relative pb-16">
       <Outlet />
-      <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-gray-900/80 backdrop-blur-lg border-t border-white/10 h-16 flex items-center justify-around">
+      <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-gray-900/95 backdrop-blur-lg border-t border-purple-500/20 h-16 flex items-center justify-around shadow-lg">
         <NavTab to="/home" icon={<Home size={24} />} label="Home" />
         <NavTab to="/mock-interview" icon={<MessageSquare size={24} />} label="Interview" />
         <NavTab to="/questions" icon={<BookOpen size={24} />} label="Questions" />
@@ -26,7 +26,11 @@ const NavTab = ({ to, icon, label }: { to: string; icon: React.ReactNode; label:
         }`
       }
     >
-      {icon}
+      <div className={({ isActive }: { isActive: boolean }) => 
+        isActive ? "bg-purple-500/20 p-1.5 rounded-full" : "p-1.5"
+      }>
+        {icon}
+      </div>
       <span className="text-xs mt-1">{label}</span>
     </NavLink>
   );
