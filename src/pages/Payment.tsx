@@ -42,23 +42,23 @@ const Payment = () => {
           <div className="p-6 space-y-4">
             <div className="flex items-center">
               <Check size={20} className="text-interview-blue mr-3 flex-shrink-0" />
-              <span>Unlimited AI mock interviews</span>
+              <span className="text-gray-800 font-medium">Unlimited AI mock interviews</span>
             </div>
             <div className="flex items-center">
               <Check size={20} className="text-interview-blue mr-3 flex-shrink-0" />
-              <span>Detailed performance analysis</span>
+              <span className="text-gray-800 font-medium">Detailed performance analysis</span>
             </div>
             <div className="flex items-center">
               <Check size={20} className="text-interview-blue mr-3 flex-shrink-0" />
-              <span>Question bank for all industries</span>
+              <span className="text-gray-800 font-medium">Question bank for all industries</span>
             </div>
             <div className="flex items-center">
               <Check size={20} className="text-interview-blue mr-3 flex-shrink-0" />
-              <span>Elevator pitch coach & feedback</span>
+              <span className="text-gray-800 font-medium">Elevator pitch coach & feedback</span>
             </div>
             <div className="flex items-center">
               <Check size={20} className="text-interview-blue mr-3 flex-shrink-0" />
-              <span>Free future updates</span>
+              <span className="text-gray-800 font-medium">Free future updates</span>
             </div>
           </div>
         </div>

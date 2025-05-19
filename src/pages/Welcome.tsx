@@ -36,19 +36,13 @@ const Welcome = () => {
 
   return (
     <div className="mobile-container flex flex-col">
-      {/* Logo and App Name Header */}
-      <div className="flex items-center p-4 pb-0">
-        <img 
-          src="/lovable-uploads/2d912998-a468-49e0-afa5-cdf91dcb4161.png" 
-          alt="Interview Ready Logo" 
-          className="w-12 h-12 mr-2"
-        />
-        <h1 className="text-xl font-bold text-white">Interview Ready</h1>
-      </div>
-      
       <div className="flex-1 flex flex-col items-center justify-center p-8 text-center">
-        <div className="w-24 h-24 gradient-blue rounded-full flex items-center justify-center shadow-lg mb-8 animate-fade-in">
-          <Mic size={48} className="text-white" />
+        <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg mb-8 animate-fade-in">
+          <img 
+            src="/lovable-uploads/2d912998-a468-49e0-afa5-cdf91dcb4161.png" 
+            alt="Interview Ready Logo" 
+            className="w-full h-full object-contain"
+          />
         </div>
         
         <h1 className="text-4xl font-bold mb-3 animate-slide-up text-shimmer">
